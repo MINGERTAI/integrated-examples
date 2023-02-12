@@ -27,14 +27,14 @@
 		curves x25519 secp521r1 secp384r1 secp256r1
 	}
 
-	@vws {
+	@vmws {
 		path /HALdGZ9k #与vmess+ws应用中path对应
 		header Connection *Upgrade*
 		header Upgrade websocket
 	}
-	reverse_proxy @vws unix//dev/shm/vws.sock #转发给本机vmess+ws监听进程
+	reverse_proxy @vmws unix/@vmessws #转发给本机vmess+ws监听进程
 
-	reverse_proxy /SeuW56Es unix//dev/shm/vh2c.sock { #与vless+h2c应用中path对应，转发给本机vless+h2c监听进程。
+	reverse_proxy /SeuW56Es unix/@vlessh2c { #与vless+h2c应用中path对应，转发给本机vless+h2c监听进程。
 		transport http {
 			versions h2c 2
 		}
