@@ -29,6 +29,9 @@
       },
       "streamSettings": {
         "security": "tls",
+        "tlsSettings": {
+          "fingerprint": "chrome" //模拟TLS指纹，可任一chrome、firefox、safari、ios、android、edge、360、qq、random、randomized选项配置。
+        }, //仅Xray支持此应用，否则必须删除此部分配置。
         "network": "h2",
         "httpSettings": {
           "path": "/teuW56Es" //修改为服务端配置的对应path

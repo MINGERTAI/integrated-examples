@@ -31,6 +31,9 @@
       },
       "streamSettings": {
         "security": "tls",
+        "tlsSettings": {
+          "fingerprint": "chrome" //模拟TLS指纹，可任一chrome、firefox、safari、ios、android、edge、360、qq、random、randomized选项配置。
+        }, //仅Xray支持此应用，否则必须删除此部分配置。
         "network": "ws",
         "wsSettings": {
           "path": "/8ALdGZ9k" //修改为服务端配置的对应path。大于Xray-core v1.4.0版本，path后加上?ed=2048即可开启WebSocket 0-RTT。

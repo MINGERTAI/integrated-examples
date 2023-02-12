@@ -13,7 +13,7 @@
         "sni": "",
         "reuse_session": true,
         "session_ticket": false,
-        "fingerprint": ""
+        "fingerprint": "chrome" //模拟TLS指纹，可任一chrome、firefox、ios选项配置。
     },
     "tcp": {
         "no_delay": true,

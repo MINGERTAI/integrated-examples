@@ -23,13 +23,15 @@
           {
             "address": "xx.yy", //修改为服务端配置的对应域名
             "port": 443, //服务端配置的端口
-            "password": "diy443", //修改为服务端配置的对应密码
-            "flow": "xtls-rprx-direct" //仅启用xtls应用才有此项参数（参数值可自己调整），否则启用tls应用必须删除此项参数。
+            "password": "diy443" //修改为服务端配置的对应密码
           }
         ]
       },
       "streamSettings": {
-        "security": "xtls", //启用xtls应用（使用xtls应用请选Xray，且服务端已配置支持。），否则启用tls应用。
+        "security": "tls",
+        "tlsSettings": {
+          "fingerprint": "chrome" //模拟TLS指纹，可任一chrome、firefox、safari、ios、android、edge、360、qq、random、randomized选项配置。
+        }, //仅Xray支持此应用，否则必须删除此部分配置。
         "network": "tcp",
         "tcpSettings": {}
       }
