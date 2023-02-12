@@ -6,7 +6,7 @@
   },
   "inbounds": [
     {
-      "listen": "/dev/shm/tgrpc.sock", //trojan+grpc监听进程
+      "listen": "/dev/shm/trojangrpc.sock", //trojan+grpc监听进程。若采用Caddy反向代理，/dev/shm/trojangrpc.sock修改为@trojangrpc。
       "protocol": "trojan",
       "settings": {
         "clients": [

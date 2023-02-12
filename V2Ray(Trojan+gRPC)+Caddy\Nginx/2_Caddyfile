@@ -19,7 +19,7 @@
 		protocol grpc
 		path /TALdGZ9k/* #与trojan+grpc应用中serviceName对应
 	}
-	reverse_proxy @tgrpc unix//dev/shm/tgrpc.sock { #转发给本机trojan+grpc监听进程
+	reverse_proxy @tgrpc unix/@trojangrpc { #转发给本机trojan+grpc监听进程
 		transport http {
 			versions h2c 2
 		}
