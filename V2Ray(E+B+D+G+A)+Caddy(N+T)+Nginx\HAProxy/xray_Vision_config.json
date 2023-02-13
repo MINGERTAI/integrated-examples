@@ -1,9 +1,9 @@
 //启用XTLS Vision配置
-//原vless+tcp+tls配置块：
+//原vless+tcp+tls配置：
 //.........<省略>........
           {
             "id": "048e0bf2-dd56-11e9-aa37-5600024c1d6a", //修改为自己的UUID
-            "email": "443@gmail.com"
+            "email": "5443@gmail.com"
           }
 //.........<省略>........
 
@@ -12,7 +12,7 @@
           {
             "id": "048e0bf2-dd56-11e9-aa37-5600024c1d6a", //修改为自己的UUID
             "flow": "xtls-rprx-vision", //启用XTLS Vision，必须增加此项配置；否则删除。
-            "email": "443@gmail.com"
+            "email": "5443@gmail.com"
           }
 //.........<省略>........
 //备注：
