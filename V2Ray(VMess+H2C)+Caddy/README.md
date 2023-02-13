@@ -1,6 +1,6 @@
 介绍：
 
-利用 Caddy 支持 H2C 代理，实现 Xray 或 V2Ray 的 vmess+h2c+tls 反向代理应用，TLS 由 Caddy 提供及处理。
+利用 Caddy 支持 H2C 代理实现 Xray 或 V2Ray 的 vmess+h2c+tls 反向代理应用，TLS 由 Caddy 提供及处理。
 
 原理：
 
