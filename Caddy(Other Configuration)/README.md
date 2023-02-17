@@ -12,7 +12,7 @@
 
 二、Caddy 以 DNS-01 验证方式申请 TLS 证书的配置方法
 
-提供了 cloudflare、dnspodcn（dnspod中国版插件）、duckdns 三种最常见插件配置示例，其它插件配置请参考官方资料及 cloudflare 或 duckdns 配置示例。
+Caddy 以 DNS-01 验证方式申请 TLS 证书，必须带对应 DNS API 插件。目前仅提供支持 cloudflare、dnspodcn（dnspod中国版）、duckdns 三种常见插件配置示例。
 
 注意：
 
@@ -20,11 +20,11 @@
 
 2、申请免费 TLS 证书的域名不要超过五个，否则影响 TLS 证书的更新。
 
-3、Caddy 以 DNS-01 验证方式申请 TLS 证书，必须带对应 DNS API 插件。dnspod 解析分 dnspod.com（国际版）与 dnspod.cn（中国版），故两者插件不通用，必须对应各自 dnspod 解析使用。
+3、使用 duckdns 插件的挑战委托模式可间接实现无 DNS API 插件的域名管理以 DNS-01 验证方式申请 TLS 证书。
 
-4、Cloudflare 已不支持 Freenom 提供的免费域名以 DNS-01 验证方式申请 TLS 证书了。可以参考 duckdns 配置示例间接（挑战委托模式）实现 Cloudflare 解析的 Freenom 免费域名以 DNS-01 验证方式申请 TLS 证书。
+4、挑战委托模式最早由 duckdns 插件专属支持，后 Caddy 通用支持了（目前 Caddyfile 支持不完全）。其它插件不推荐配置此应用：A、其它插件使用此模式需要两个根域名；其中一个域名仅用它二级域名来中间关联，极大浪费。 B、目前其它插件 Caddyfile 配置挑战委托模式很不方便，无对应全局配置参数。
 
-5、挑战委托模式最早由 duckdns 插件专属支持，后 Caddy 通用支持了（目前 Caddyfile 支持不完全）。其它插件不推荐配置此应用：A、其它插件使用此模式需要两个根域名；其中一个域名仅用它二级域名来中间关联，极大浪费。 B、目前其它插件 Caddyfile 配置挑战委托模式很不方便，无对应全局配置参数。
+5、Cloudflare 已不支持后缀为 tk、ml、cf、ga、gq 的免费域名以 DNS-01 验证方式申请 TLS 证书了。可以参考上 duckdns 插件的挑战委托模式间接实现以 DNS-01 验证方式申请 TLS 证书。
 
 三、caddy-events-exec 插件应用配置方法
 
