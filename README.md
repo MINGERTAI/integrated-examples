@@ -2,10 +2,10 @@
 1. 实现了反代使用Local Loopback连接或使用Unix Domain Socket（UDS）连接支持。
 2. 实现了回落/分流使用Local Loopback连接或使用Unix Domain Socket（UDS）连接及启用PROXY protocol支持。
 3. 实现了SNI分流使用Local Loopback连接或使用Unix Domain Socket（UDS）连接及启用PROXY protocol支持。
-4. 实现了Nginx SNI分流（TCP转发）与定向UDP转发配合以支持SNI分流后的NaiveProxy HTTP/3代理应用。
-5. 实现了使用json配置Caddy SNI分流，灵活性等同HAProxy SNI分流。
-6. 实现了Caddy与相关应用的TLS证书申请与更新全自动化。
-7. 实现了Caddy、Xray/V2Ray使用Unix Domain Socket（UDS）连接时采用Abstract sockets模式（连接不需考虑权限问题）。
+4. 实现了Caddy、Xray/V2Ray使用Unix Domain Socket（UDS）连接时采用Abstract sockets模式（UDS连接不需考虑权限问题）。
+5. 实现了Nginx SNI分流（TCP转发）与定向UDP转发配合以支持SNI分流后的NaiveProxy HTTP/3代理应用。
+6. 实现了使用json配置Caddy SNI分流，灵活性等同HAProxy SNI分流。
+7. 实现了Caddy与相关应用的TLS证书申请与更新全自动化。
 8. 实现了除Xray/V2Ray mKCP与Hysteria应用之外，其它应用对外都使用443端口，各应用互不影响。
 9. 实现了CDN流量中转（基于WebSocket over TLS或基于gRPC over TLS）与正常应用同时使用。
 10. 实现了除Xray/V2Ray mKCP与Hysteria应用之外，其它应用都支持流量伪装与防探测，且提供流量伪装与防探测的回落或代理网站都支持HTTP自动跳转到HTTPS，SSL/TLS安全评估报告为A+（V2Ray回落网站除外）等，即所有特征完全与真实网站一致。
